@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-// import { useContext } from 'react';
-// import { AuthContext } from '../../providers/AuthProvider';
+import { useContext } from 'react';
+import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
 
 const Register = () => {
-    // const { createUser } = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
 
     const handleRegister = e => {
         e.preventDefault();
