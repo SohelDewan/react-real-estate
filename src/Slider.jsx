@@ -17,8 +17,8 @@ const Slider = () => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+    //   onSwiper={(swiper) => console.log(swiper)}
+    //   onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide>
       <img src="https://i.ibb.co/Yj6CY5P/home3.jpg" alt="home3" border="0" style={{height:'100vh', width:'100%'}}/>

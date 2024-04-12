@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import SocialLogin from "./SocialLogin";
 
 const Login = () => {
   // eslint-disable-next-line no-unused-vars
-  const { createUser } = useAuth;
+  const { createUser } = useAuth();
     
   const handleLogin = (e) => {
     e.preventDefault();
@@ -50,6 +51,7 @@ const Login = () => {
         </div>
       </form>
       <p className="text-center mt-4">Do not have an account!  <Link className="text-[#30B6EC] font-bold" to='/register'> Register</Link></p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };

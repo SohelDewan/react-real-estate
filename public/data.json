@@ -38,6 +38,44 @@
       "facilities": ["living room", "fireplace", "private dock"],
       "view_property_button": "View Property"
     },
-  
+    {
+        "image": "path/to/estate4.jpg",
+        "estate_title": "Seaside Bungalow",
+        "id": 4,
+        "segment_name": "Beachfront",
+        "description": "Cozy 1-bedroom bungalow steps away from the sandy shore. Ocean views, hammock, and sea breeze.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "800 sq ft",
+        "location": "Maui, Hawaii",
+        "facilities": ["living room", "hammock", "ocean view"],
+        "view_property_button": "View Property"
+      },
+      {
+        "image": "path/to/estate5.jpg",
+        "estate_title": "Historic Mansion",
+        "id": 5,
+        "segment_name": "Heritage",
+        "description": "Grand 6-bedroom mansion with ornate architecture. Ballroom, library, and sprawling gardens.",
+        "price": "$6,200,000",
+        "status": "sale",
+        "area": "10,000 sq ft",
+        "location": "London, United Kingdom",
+        "facilities": ["living room", "ballroom", "library"],
+        "view_property_button": "View Property"
+      },
+      {
+        "image": "path/to/estate6.jpg",
+        "estate_title": "Mountain Retreat",
+        "id": 6,
+        "segment_name": "Scenic",
+        "description": "Rustic log cabin nestled in the alpine forest. Fireplace, hot tub, and panoramic mountain views.",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "1,500 sq ft",
+        "location": "Aspen, Colorado",
+        "facilities": ["living room", "fireplace", "hot tub"],
+        "view_property_button": "View Property"
+      }
   ]
   

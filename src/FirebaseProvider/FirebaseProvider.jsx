@@ -4,35 +4,35 @@ import auth from "../components/Firebase/FirebaseConfig";
 
 export const AuthContext = createContext(null)
 
+
+// eslint-disable-next-line react/prop-types
 const FirebaseProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
-    // console.log(user)
+    console.log(user)
 
+     //create user
+     const createUser = ( email, password)=>{
+        return createUserWithEmailAndPassword(auth, email, password)
+      }
     //sign in user
-
     const signInUser = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
-
-    //create user
-    const createUser = ( email, password)=>{
-      return createUserWithEmailAndPassword(auth, email, password)
-    }
-    // social provider
-    const googleProvider = new GoogleAuthProvider();
-    // google login
-    const googleLogin = ()=>{
-        return signInWithPopup(auth, googleProvider)
-    }
-    //observe changes
-    useEffect(()=>{
+     //observe changes
+     useEffect(()=>{
         onAuthStateChanged(auth, (user) => {
             if (user) {
               setUser(user);
             } 
           });
     },[])
+    // social auth provider
+    const googleProvider = new GoogleAuthProvider();
+    // google login
+    const googleLogin = ()=>{
+        return signInWithPopup(auth, googleProvider)
+    } 
 
     const allValues = {
         createUser,
