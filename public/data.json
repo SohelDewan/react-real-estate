@@ -1,0 +1,43 @@
+[
+    {
+      "image": "path/to/estate1.jpg",
+      "estate_title": "Luxury Villa with Ocean View",
+      "id": 1,
+      "segment_name": "Residential",
+      "description": "Stunning 4-bedroom villa overlooking the azure waters. Modern design, spacious rooms, and private beach access.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "3,500 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "view_property_button": "View Property"
+    },
+    {
+      "image": "path/to/estate2.jpg",
+      "estate_title": "Penthouse in the Sky",
+      "id": 2,
+      "segment_name": "Luxury",
+      "description": "Elegance meets sophistication in this 3-bedroom penthouse. Floor-to-ceiling windows, rooftop terrace, and concierge service.",
+      "price": "$4,800,000",
+      "status": "sale",
+      "area": "2,200 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["living room", "gym", "rooftop terrace"],
+      "view_property_button": "View Property"
+    },
+    {
+      "image": "path/to/estate3.jpg",
+      "estate_title": "Lakefront Retreat",
+      "id": 3,
+      "segment_name": "Vacation",
+      "description": "Charming 2-bedroom cottage nestled by the lake. Rustic interiors, private dock, and breathtaking sunsets.",
+      "price": "$650,000",
+      "status": "sale",
+      "area": "1,000 sq ft",
+      "location": "Lake Tahoe, Nevada",
+      "facilities": ["living room", "fireplace", "private dock"],
+      "view_property_button": "View Property"
+    },
+  
+  ]
+  
