@@ -11,6 +11,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import NotFound from './components/NotFound';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
+import UpdateProfile from './components/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />
       },
+      {
+        path: "/update-profile",
+        element: <UpdateProfile />
+      }
     ]
   },
 ]);
