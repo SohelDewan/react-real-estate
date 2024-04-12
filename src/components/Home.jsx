@@ -1,8 +1,11 @@
+// import Navbar from "./Navbar";
+import Slider from "../Slider";
 
 const Home = () => {
     return (
         <div>
-            <h2>This is Home</h2>
+            {/* <Navbar></Navbar> */}
+            <Slider></Slider>
         </div>
     );
 };

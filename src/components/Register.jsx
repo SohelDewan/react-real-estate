@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
+import useAuth from '../Hooks/useAuth';
+// import { useForm } from 'react-hook-form';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser } = useAuth;
 
+    // const  { register, handleSubmit, watch, formState: { errors }} = useForm();
+      
+    //     const onSubmit = data => {
+    //     console.log(data)
+    //   };
     const handleRegister = e => {
         e.preventDefault();
         console.log(e.currentTarget);
@@ -16,27 +21,27 @@ const Register = () => {
         const password = form.get('password');
         console.log(name, photo, email, password);
 
-        // create user
-        // createUser(email, password)
-        //     .then(result => {
-        //         console.log(result.user)
-        //     })
-        //     .catch(error => {
-        //         console.error(error)
-        //     })
+        //create user
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
 
     }
 
     return (
         <div>
             <div>
-                <h2 className="text-3xl my-10 text-center">Please Register</h2>
-                <form onSubmit={handleRegister} className=" md:w-3/4 lg:w-1/2 mx-auto">
+                <h2 className="text-3xl my-4 text-center">Please Register</h2>
+                <form onSubmit={handleRegister} className=" md:w-3/4 lg:w-1/4 mx-auto">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" required name="name" placeholder="Name" className="input input-bordered" />
+                        <input type="text" required name="name" placeholder="Name" className="input input-bordered"/>
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -60,10 +65,10 @@ const Register = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Register</button>
+                        <button className="btn bg-[#30B6EC] text-white">Register</button>
                     </div>
                 </form>
-                <p className="text-center mt-4">Already have an account? <Link className="text-blue-600 font-bold" to="/login">Login</Link></p>
+                <p className="text-center mt-4">Already have an account? <Link className="text-[#30B6EC] font-bold" to="/login">Login</Link></p>
             </div>
         </div>
     );

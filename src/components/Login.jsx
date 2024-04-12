@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
 const Login = () => {
+  // eslint-disable-next-line no-unused-vars
+  const { createUser } = useAuth;
     
   const handleLogin = (e) => {
     e.preventDefault();
@@ -10,7 +13,7 @@ const Login = () => {
   };
   return (
     <div>
-      <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto">
+      <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/4 mx-auto">
         <h2 className="text-3xl text-center mt-6">Please Login</h2>
 
         <div className="form-control">
@@ -43,10 +46,10 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-[#30B6EC] text-white">Login</button>
         </div>
       </form>
-      <p className="text-center mt-4">Do not have an account!  <Link className="text-blue-700 font-bold" to='/register'> Register</Link></p>
+      <p className="text-center mt-4">Do not have an account!  <Link className="text-[#30B6EC] font-bold" to='/register'> Register</Link></p>
     </div>
   );
 };
