@@ -11,7 +11,7 @@ const Home = () => {
             {/* <Navbar></Navbar> */}
             <Slider></Slider>
             {/* <EstateSection></EstateSection> */}
-            <div className="grid md:grid-cols-3 container mx-auto my-8 gap-4">
+            <div className="grid p-5 md:grid-cols-3 container mx-auto my-8 gap-4">
 
             {
                 estates.map(est => <EstateSection

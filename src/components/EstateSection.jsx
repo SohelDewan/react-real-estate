@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 const EstateSection = ({ estates }) => {
   const {
@@ -12,7 +12,7 @@ const EstateSection = ({ estates }) => {
   } = estates;
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl">
       <figure>
         <img src={image} alt="image" />
       </figure>
@@ -38,6 +38,9 @@ EstateSection.propTypes = {
     image: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     segment_name: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    facilities: PropTypes.string.isRequired,
+    view_property_button: PropTypes.string.isRequired,
   }).isRequired,
 };
 export default EstateSection;
