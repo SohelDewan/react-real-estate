@@ -1,14 +1,24 @@
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
 const Navbar = () => {
-
-    const nabLinks = <>
-         <li className="md:mr-6"><NavLink to='/'>Home</NavLink></li>
-         <li className="md:mr-6"><NavLink to='/login'>Login</NavLink></li>
-         <li className="md:mr-6"><NavLink to='/register'>Register</NavLink></li>
-         <li className="md:mr-6"><NavLink to='/update-profile'>Update Profile</NavLink></li>
+  const { logout, user } = useAuth();
+  const nabLinks = (
+    <>
+      <li className="md:mr-6">
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li className="md:mr-6">
+        <NavLink to="/login">Login</NavLink>
+      </li>
+      <li className="md:mr-6">
+        <NavLink to="/register">Register</NavLink>
+      </li>
+      <li className="md:mr-6">
+        <NavLink to="/update-profile">Update Profile</NavLink>
+      </li>
     </>
+  );
 
   return (
     <div className="navbar bg-base-100">
@@ -34,18 +44,49 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-           {nabLinks}
+            {nabLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Residential<span className="text-[#30B6EC]">Homes</span></a>
+        <a className="btn btn-ghost text-xl">
+          Residential<span className="text-[#30B6EC]">Homes</span>
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-[#30B6EC] font-bold">
-        {nabLinks}
+          {nabLinks}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-[#30B6EC] text-white">user profile</a>
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img
+                  src={user?.photoURL || "https://i.ibb.co/m8CkQrr/sohel.jpg"}
+                />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <button className="btn btn-sm  btn-ghost">
+                  {user?.displayName || "user name not found"}
+                </button>
+              </li>
+              <li>
+                <button onClick={logout} className="btn btn-sm  btn-ghost">
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="btn btn-sm  btn-ghost">Login</button>
+          </Link>
+        )}
       </div>
     </div>
   );
