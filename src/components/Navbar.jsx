@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
-
+import userDefaultPic from "../assets/user.png";
 const Navbar = () => {
   const { logout, user } = useAuth();
   const nabLinks = (
@@ -13,6 +13,9 @@ const Navbar = () => {
       </li>
       <li className="md:mr-6">
         <NavLink to="/register">Register</NavLink>
+      </li>
+      <li className="md:mr-6">
+        <NavLink to="/estate-section">Estate Section</NavLink>
       </li>
       <li className="md:mr-6">
         <NavLink to="/update-profile">Update Profile</NavLink>
@@ -59,6 +62,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="dropdown dropdown-end">
+          
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img
@@ -70,6 +74,7 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52"
             >
+            
               <li>
                 <button className="btn btn-sm  btn-ghost">
                   {user?.displayName || "user name not found"}
@@ -84,7 +89,12 @@ const Navbar = () => {
           </div>
         ) : (
           <Link to="/login">
-            <button className="btn btn-sm  btn-ghost">Login</button>
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <div className="w-10 rounded-full">
+                        <img src={userDefaultPic} />Login
+                    </div>
+                </label>
+            <p className="hover:bg-[#30B6EC] px-2 rounded-xl">Login</p>
           </Link>
         )}
       </div>
