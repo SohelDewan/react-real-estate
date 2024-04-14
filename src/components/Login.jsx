@@ -31,13 +31,13 @@ const Login = () => {
     const form = new FormData(e.currentTarget);
     console.log(form.get('password'));
     if (validatePassword(password)) {
-      // Call Firebase authentication method to create/update user
       // ...
     } else {
-      // Display an error message to the user
       alert('Password does not meet requirements.');
     }
   };
+
+
   return (
     <div>
       <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/4 mx-auto bg-[#2B3440] p-3 rounded-2xl text-white">

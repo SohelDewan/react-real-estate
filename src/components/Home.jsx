@@ -4,8 +4,10 @@ import Slider from "../Slider";
 import EstateSection from "./EstateSection";
 
 const Home = () => {
+
     const estates = useLoaderData();
     console.log(estates)
+
     return (
         <div>
             {/* <Navbar></Navbar> */}

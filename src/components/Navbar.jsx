@@ -1,8 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import userDefaultPic from "../assets/user.png";
+
 const Navbar = () => {
+
   const { logout, user } = useAuth();
+
   const nabLinks = (
     <>
       <li className="md:mr-6">
@@ -15,7 +18,7 @@ const Navbar = () => {
         <NavLink to="/register">Register</NavLink>
       </li>
       <li className="md:mr-6">
-        <NavLink to="/estate-section">Estate Section</NavLink>
+        <NavLink to="/estate-section-page">Estate Section</NavLink>
       </li>
       <li className="md:mr-6">
         <NavLink to="/update-profile">Update Profile</NavLink>
@@ -24,7 +27,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div id="estate-section-full" className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn lg:hidden">

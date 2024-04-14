@@ -3,8 +3,7 @@ const Footer = () => {
     <footer className="footer mt-6 p-10 bg-neutral text-neutral-content">
      <div className="container mx-auto md:p-5 flex justify-between md:justify-around">
      <aside>
-      
-      <img src="../../src/assets/logo.png" className="w-16"/>
+     <img src="https://i.ibb.co/vsRGW27/logo.png" alt="logo" className="w-16" />
       <p>
         Residential Homes Ltd.
         <br />

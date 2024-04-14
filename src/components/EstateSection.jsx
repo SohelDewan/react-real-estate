@@ -1,6 +1,8 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+
 const EstateSection = ({ estates }) => {
+
   const {
     location,
     facilities,
@@ -8,7 +10,7 @@ const EstateSection = ({ estates }) => {
     estate_title,
     segment_name,
     description,
-    view_property_button,
+    view_property_button
   } = estates;
 
   return (
@@ -26,7 +28,10 @@ const EstateSection = ({ estates }) => {
           <div className="badge badge-outline">{location}</div>
           <div className="badge badge-outline">{facilities}</div>
         </div>
-    <button className="px-8 py-2 bg-[#30B6EC] text-white rounded-3xl">{view_property_button}</button>
+     <Link className="flex justify-end" to={`estate/${estate_title}`}>
+    <button className="px-8 py-2 bg-[#30B6EC] text-white rounded-3xl">{view_property_button}
+    </button>
+    </Link>
       </div>
     </div>
   );
@@ -34,6 +39,7 @@ const EstateSection = ({ estates }) => {
 
 EstateSection.propTypes = {
   estates: PropTypes.shape({
+    id:PropTypes.number.isRequired,
     estate_title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,

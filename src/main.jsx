@@ -12,7 +12,8 @@ import Register from './components/Register';
 import NotFound from './components/NotFound';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import UpdateProfile from './components/UpdateProfile';
-import EstateSection from './components/EstateSection';
+import Estate from './components/Estate';
+import EstateSectionPage from './components/EstateSectionPage';
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('/data.json')
-        
+        loader: ()=> fetch('/data.json')      
+      },
+    
+      {
+        path: '/estate/:title',
+        element: <Estate />,
+        loader: ()=> fetch('/data.json') 
       },
       {
         path: "/login",
@@ -35,8 +41,9 @@ const router = createBrowserRouter([
         element: <Register />
       },
       {
-        path: "/estate-section",
-        element: <EstateSection />
+        path: "/estate-section-page",
+        element: <EstateSectionPage />,
+        loader: ()=> fetch('/data.json') 
       },
       {
         path: "/update-profile",

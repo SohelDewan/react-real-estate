@@ -2,8 +2,10 @@ https://github.com/programming-hero-web-course-4/b9a9-real-estate-SohelDewan
 
 firebase project name: residential-homes-auth
 
-website name:Residential Homes
+website name:Residential Homes,
+
 Live link: https://residential-homes.netlify.app/
+
  features and characteristics website:
  ● Varity of Location with natural beauty
  ● Nice intorior design inside the building description
