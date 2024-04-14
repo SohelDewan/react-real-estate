@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDOlHH6T2CfUmz3TWe9oD9S4XZfAF8i5eM",
-  authDomain: "residential-homes-auth.firebaseapp.com",
-  projectId: "residential-homes-auth",
-  storageBucket: "residential-homes-auth.appspot.com",
-  messagingSenderId: "339986037933",
-  appId: "1:339986037933:web:96688366841841460f9a24"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

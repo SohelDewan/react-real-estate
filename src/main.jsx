@@ -14,6 +14,7 @@ import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import UpdateProfile from './components/UpdateProfile';
 import Estate from './components/Estate';
 import EstateSectionPage from './components/EstateSectionPage';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -29,8 +30,7 @@ const router = createBrowserRouter([
     
       {
         path: '/estate/:title',
-        element: <Estate />,
-        loader: ()=> fetch('/data.json') 
+        element: <PrivateRoute><Estate /></PrivateRoute>,
       },
       {
         path: "/login",

@@ -111,8 +111,8 @@ const Register = () => {
               className="input input-bordered text-[#30B6EC]"
               value={password}
             onChange={handlePasswordChange}
-            id='id_password'
-            autoComplete="current-password"
+            // id='id_password'
+            // autoComplete="current-password"
             />
               {passwordError && <p className="text-red-500">{passwordError}</p>}
             <label className="label">

@@ -12,7 +12,8 @@ Live link: https://residential-homes.netlify.app/
  ● Available for both small and large families
  ● Budget friendly 
  ● Easy access
-challenges: npm i swiper
+ 
+challenges pakages: npm i swiper
 
 Additional:
 firebase init hosting 
