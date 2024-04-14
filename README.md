@@ -4,7 +4,8 @@ firebase project name: residential-homes-auth
 
 website name:Residential Homes,
 
-Live link: https://residential-homes.netlify.app/
+Live link:https://residential-homes-auth.web.app/
+ https://residential-homes.netlify.app/
 
  features and characteristics website:
  ● Varity of Location with natural beauty
