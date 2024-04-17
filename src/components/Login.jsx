@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import SocialLogin from "./SocialLogin";
-
+import { RiEyeCloseFill } from "react-icons/ri";
 const Login = () => {
   // eslint-disable-next-line no-unused-vars
   const { createUser } = useAuth();
@@ -55,13 +55,14 @@ const Login = () => {
           <input
             type="password"
             name="password"
-            placeholder="password"
+            placeholder="  password "
             className="input input-bordered text-[#30B6EC]"
             required
             id='id_password'
             autoComplete="current-password"
-          />        
+          />   
         </div>
+          <RiEyeCloseFill className="inline-block text-end -mt-16 text-gray-500 "/>     
         <div className="form-control mt-6">
           <button className="btn bg-[#30B6EC] text-white border-0">Login</button>
         </div>

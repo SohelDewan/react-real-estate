@@ -10,18 +10,23 @@ export const AuthContext = createContext(null)
 const FirebaseProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
     console.log(user)
 
      //create user
      const createUser = ( email, password)=>{
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
       }
     //sign in user
     const signInUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
     //sign out user
     const logout = ()=>{
+        setLoading(true);
         setUser(null);
         signOut(auth)
     }
@@ -30,6 +35,7 @@ const FirebaseProvider = ({children}) => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
               setUser(user);
+              setLoading(false); 
             } 
           });
     },[])
@@ -51,6 +57,7 @@ const FirebaseProvider = ({children}) => {
     }
     const allValues = {
         createUser,
+        loading,
         signInUser,
         googleLogin,
         githubLogin,

@@ -5,6 +5,7 @@ firebase project name: residential-homes-auth
 website name:Residential Homes,
 
 Live link:https://residential-homes-auth.web.app/
+
  https://residential-homes.netlify.app/
 
  features and characteristics website:
@@ -15,8 +16,9 @@ Live link:https://residential-homes-auth.web.app/
  ● Easy access
  
 challenges pakages: 1 Swiper slider (npm i swiper)
-2.React Hook form (npm install react-hook-form)
+2 .npm install react-icons --save
 3. https://animate.style/ (npm install animate.css --save)
+4.React Hook form (npm install react-hook-form)
 
 
 Additional:
