@@ -63,12 +63,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-              <p className="text-[#30B6EC]">user profile</p>
+              <p className="text-[#30B6EC] tooltip z-99 tooltip-bottom" data-tip={user?.displayName}>user profile</p>
         {user ? (
           <div className="dropdown dropdown-end">
           
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-10 rounded-full " >
                 <img
                   src={user?.photoURL || "https://i.ibb.co/m8CkQrr/sohel.jpg"}
                 />
@@ -79,7 +79,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <button className="btn btn-sm  btn-ghost">
+                <button className="btn btn-sm  btn-ghost tooltip" data-tip={user.displayName}>
                   {user?.displayName || "user name not found"}
                 </button>
               </li>
@@ -93,7 +93,7 @@ const Navbar = () => {
         ) : (
           <Link to="/login">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
+                    <div className="w-10 rounded-full ">
                         <img src={userDefaultPic} />Login
                     </div>
                 </label>

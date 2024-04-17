@@ -2,10 +2,18 @@ import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import SocialLogin from "./SocialLogin";
 import { RiEyeCloseFill } from "react-icons/ri";
+import { RxEyeOpen } from "react-icons/rx";
+import { useState } from "react";
+
 const Login = () => {
   // eslint-disable-next-line no-unused-vars
   const { createUser } = useAuth();
   const { signInUser} = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleLogin = (e) => {
 
@@ -53,20 +61,26 @@ const Login = () => {
             <span className="label-text text-white">Password</span>
           </label>
           <input
-            type="password"
-            name="password"
-            placeholder="  password "
-            className="input input-bordered text-[#30B6EC]"
-            required
-            id='id_password'
-            autoComplete="current-password"
+          type={showPassword ? 'text' : 'password'}
+          placeholder="     Enter your password"
+          name="password"
+          className="input input-bordered text-[#30B6EC]"
+          required
+          id='id_password'
+          autoComplete="current-password"
           />   
         </div>
-          <RiEyeCloseFill className="inline-block text-end -mt-16 text-gray-500 "/>     
+          <div className="-mt-8">
+          <button onClick={togglePasswordVisibility} className="  text-gray-500">  
+          {showPassword ? <RiEyeCloseFill />  : <RxEyeOpen /> }
+        </button>
+          </div>
+          
         <div className="form-control mt-6">
           <button className="btn bg-[#30B6EC] text-white border-0">Login</button>
         </div>
       </form>
+      
       <p className="text-center mt-4">Do not have an account!{' '}  <Link className="text-[#30B6EC] font-bold" to='/register'> Register</Link></p>
       <SocialLogin></SocialLogin>
     </div>

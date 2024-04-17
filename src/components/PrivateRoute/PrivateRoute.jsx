@@ -9,7 +9,11 @@ const PrivateRoute = ({children}) => {
     console.log(location);
 
     if(loading) {
-        return <div>Loading...</div>
+        return <div className="text-center text-2xl">
+        <h3 className="text-[#30B6EC]">Loading...</h3>
+        <span className="loading loading-ring loading-lg"></span>
+        <h3>Log in please</h3>
+        </div>
     }
 
     if(user) {
