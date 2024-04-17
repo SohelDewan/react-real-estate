@@ -4,7 +4,7 @@ import { useState } from 'react';
 // import { useForm } from 'react-hook-form';
 
 const Register = () => {
-  const { createUser } = useAuth;
+  const { createUser } = useAuth(); // useContext(AuthContext)
 
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -45,12 +45,6 @@ const Register = () => {
       .catch((error) => {
         console.error(error);
       });
-
-    if (validatePassword(password)) {
-      // ...
-    } else {
-      alert("Password does not meet requirements.");
-    }
   };
 
   return (
@@ -115,11 +109,11 @@ const Register = () => {
             // autoComplete="current-password"
             />
               {passwordError && <p className="text-red-500">{passwordError}</p>}
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+            {/* <label className="label">
+              <a href="#" className="label-text-alt  text-white">
                 Forgot password?
               </a>
-            </label>
+            </label> */}
           </div>
           <div className="form-control mt-6">
             <button className="btn bg-[#30B6EC] text-white border-0">

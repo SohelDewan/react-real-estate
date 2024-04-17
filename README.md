@@ -14,7 +14,10 @@ Live link:https://residential-homes-auth.web.app/
  ● Budget friendly 
  ● Easy access
  
-challenges pakages: npm i swiper
+challenges pakages: 1 Swiper slider (npm i swiper)
+2.React Hook form (npm install react-hook-form)
+3. https://animate.style/ (npm install animate.css --save)
+
 
 Additional:
 firebase init hosting 

@@ -2,7 +2,7 @@
     {
       "image": "https://i.ibb.co/Yj6CY5P/home3.jpg",
       "estate_title": "Luxury Villa with Ocean View",
-      "id": 1,
+      "id": "1",
       "segment_name": "Residential",
       "description": "Stunning 4-bedroom villa overlooking the azure waters. Modern design, spacious rooms, and private beach access.",
       "price": "$2,500,000",
@@ -15,7 +15,7 @@
     {
       "image": "https://i.ibb.co/RBgv63M/home1.webp",
       "estate_title": "Penthouse in the Sky",
-      "id": 2,
+      "id": "2",
       "segment_name": "Luxury",
       "description": "Elegance meets sophistication in this 3-bedroom penthouse. Floor-to-ceiling windows, rooftop terrace, and concierge service.",
       "price": "$4,800,000",
@@ -28,7 +28,7 @@
     {
       "image": "https://i.ibb.co/2PC5fcM/home2.webp",
       "estate_title": "Lakefront Retreat",
-      "id": 3,
+      "id": "3",
       "segment_name": "Vacation",
       "description": "Charming 2-bedroom cottage nestled by the lake. Rustic interiors, private dock, and breathtaking sunsets.",
       "price": "$650,000",
@@ -41,7 +41,7 @@
     {
         "image": "https://i.ibb.co/sgnMVy9/home4.webp" ,
         "estate_title": "Seaside Bungalow",
-        "id": 4,
+        "id": "4",
         "segment_name": "Beachfront",
         "description": "Cozy 1-bedroom bungalow steps away from the sandy shore. Ocean views, hammock, and sea breeze.",
         "price": "$350,000",
@@ -54,7 +54,7 @@
       {
         "image": "https://i.ibb.co/Bc7xRJW/home5.jpg",
         "estate_title": "Historic Mansion",
-        "id": 5,
+        "id": "5",
         "segment_name": "Heritage",
         "description": "Grand 6-bedroom mansion with ornate architecture. Ballroom, library, and sprawling gardens.",
         "price": "$6,200,000",
@@ -67,7 +67,7 @@
       {
         "image": "https://i.ibb.co/Rj7nqxN/home6.jpg",
         "estate_title": "Mountain Retreat",
-        "id": 6,
+        "id": "6",
         "segment_name": "Scenic",
         "description": "Rustic log cabin nestled in the alpine forest. Fireplace, hot tub, and panoramic mountain views.",
         "price": "$800,000",

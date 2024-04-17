@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
+// here EstateSection is an individual card
 const EstateSection = ({ estates }) => {
 
   const {
+    id,
     location,
     facilities,
     image,
@@ -28,7 +30,7 @@ const EstateSection = ({ estates }) => {
           <div className="badge badge-outline">{location}</div>
           <div className="badge badge-outline">{facilities}</div>
         </div>
-     <Link className="flex justify-end" to={`estate/${estate_title}`}>
+     <Link className="flex justify-end" to={`/estate/${id}`}>
     <button className="px-8 py-2 bg-[#30B6EC] text-white rounded-3xl">{view_property_button}
     </button>
     </Link>
@@ -45,7 +47,7 @@ EstateSection.propTypes = {
     description: PropTypes.string.isRequired,
     segment_name: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    facilities: PropTypes.string.isRequired,
+    facilities: PropTypes.array.isRequired,
     view_property_button: PropTypes.string.isRequired,
   }).isRequired,
 };

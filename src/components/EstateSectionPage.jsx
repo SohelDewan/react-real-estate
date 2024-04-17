@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import EstateSection from "./EstateSection";
-
+//1
 const EstateSectionPage = () => {
+
   const estates = useLoaderData();
   console.log(estates);
   return (

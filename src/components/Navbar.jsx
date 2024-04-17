@@ -63,6 +63,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
+              <p className="text-[#30B6EC]">user profile</p>
         {user ? (
           <div className="dropdown dropdown-end">
           
@@ -77,7 +78,6 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[11] p-2 shadow bg-base-100 rounded-box w-52"
             >
-            
               <li>
                 <button className="btn btn-sm  btn-ghost">
                   {user?.displayName || "user name not found"}

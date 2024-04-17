@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import SocialLogin from "./SocialLogin";
@@ -6,36 +5,29 @@ import SocialLogin from "./SocialLogin";
 const Login = () => {
   // eslint-disable-next-line no-unused-vars
   const { createUser } = useAuth();
-  const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const handlePasswordChange = (e) => {
-    const newPassword = e.target.value;
-    setPassword(newPassword);
-    validatePassword(newPassword); // Validate password on each change
-  };
-  const validatePassword = (password) => {
-    const hasUppercase = /[A-Z]/.test(password);
-    const hasLowercase = /[a-z]/.test(password);
-    const hasMinLength = password.length >= 6;
+  const { signInUser} = useAuth();
 
-    if (!hasUppercase || !hasLowercase || !hasMinLength) {
-      setPasswordError('Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long.');
-    } else {
-      setPasswordError('');
-    }
-  };
-    
   const handleLogin = (e) => {
+
     e.preventDefault();
+
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-    console.log(form.get('password'));
-    if (validatePassword(password)) {
-      // ...
-    } else {
-      alert('Password does not meet requirements.');
-    }
+
+    const email = form.get('email');
+    const password = form.get('password');
+
+    console.log(email, password);
+
+    signInUser(email, password)
+    .then((result) => {
+       console.log(result.user);
+    })
+    .catch((error) => {
+       console.error(error);
+    });
   };
+  
 
 
   return (
@@ -66,19 +58,9 @@ const Login = () => {
             placeholder="password"
             className="input input-bordered text-[#30B6EC]"
             required
-            value={password}
-            onChange={handlePasswordChange}
             id='id_password'
             autoComplete="current-password"
-          />
-          {/* <i className="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i> */}
-
-          {passwordError && <p className="text-red-500">{passwordError}</p>}
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover text-white">
-              Forgot password?
-            </a>
-          </label>
+          />        
         </div>
         <div className="form-control mt-6">
           <button className="btn bg-[#30B6EC] text-white border-0">Login</button>
