@@ -4,10 +4,10 @@ const Estate = () => {
   const { id } = useParams();
   const estates = useLoaderData();
   const singleEstate = estates.find((e) => e.id === id);
-  console.log(singleEstate);
+  // console.log(singleEstate);
   return (
-    <div className="container mx-auto">
-    <h2 className="text-5xl my-5">{singleEstate.estate_title}</h2>
+    <div className="container mx-auto animate__animated animate__backInDown">
+    <h2 className="text-5xl my-5 ">{singleEstate.estate_title}</h2>
       <div className="">
         <div className=" md:flex w-4/5">
           <img className="rounded-lg mb-5" src={singleEstate.image} />
@@ -37,7 +37,7 @@ const Estate = () => {
         ></img>
         <p>3 Baths</p>
       </div>
-        <div className=" lg:grid gap-4 md:grid-cols-4 hidden md:block">
+        <div className=" lg:grid gap-4 md:grid-cols-4 hidden md:block animate__animated animate__fadeInLeft animate__delay-2s ">
           <img
             className="rounded-3xl"
             src="https://i.ibb.co/1fncpj2/indor1.jpg"

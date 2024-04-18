@@ -15,10 +15,14 @@ Live link:https://residential-homes-auth.web.app/
  ● Budget friendly 
  ● Easy access
  
-challenges pakages: 1 Swiper slider (npm i swiper)
-2 .npm install react-icons --save
+challenges pakages: 
+1 Swiper slider (npm i swiper)
+2. npm install aos --save
 3. https://animate.style/ (npm install animate.css --save)
-4.React Hook form (npm install react-hook-form)
+4 .npm install react-icons --save
+5. npm install react-toastify
+<!-- 6.React Hook form (npm install react-hook-form) -->
+firebase deploy --only hosting
 
 
 Additional:
@@ -26,3 +30,5 @@ firebase init hosting
 npm install -g firebase-tools 
 run `npm fund` for details
 twitter client secret:n4RYm4L7I_Djvgm0rytgakiBCHn_b8unqjaXigojXMcJVcYT6c
+
+animate__backInDown

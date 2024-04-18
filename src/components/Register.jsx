@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { useState } from 'react';
+import 'animate.css';
 // import { useForm } from 'react-hook-form';
 
 const Register = () => {
@@ -8,10 +9,11 @@ const Register = () => {
 
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
+
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
     setPassword(newPassword);
-    validatePassword(newPassword); // Validate password on each change
+    validatePassword(newPassword); 
   };
   const validatePassword = (password) => {
     const hasUppercase = /[A-Z]/.test(password);
@@ -49,7 +51,7 @@ const Register = () => {
 
   return (
     <div>
-      <div>
+      <div className="animate__animated animate__pulse">
         <form
           onSubmit={handleRegister}
           className=" md:w-3/4 lg:w-1/4 mx-auto  bg-[#2B3440] p-3 rounded-2xl text-white"
@@ -105,22 +107,19 @@ const Register = () => {
               className="input input-bordered text-[#30B6EC]"
               value={password}
             onChange={handlePasswordChange}
-            // id='id_password'
-            // autoComplete="current-password"
+
             />
               {passwordError && <p className="text-red-500">{passwordError}</p>}
-            {/* <label className="label">
-              <a href="#" className="label-text-alt  text-white">
-                Forgot password?
-              </a>
-            </label> */}
+
           </div>
+
           <div className="form-control mt-6">
             <button className="btn bg-[#30B6EC] text-white border-0">
               Register
             </button>
           </div>
         </form>
+        
         <p className="text-center mt-4">
           Already have an account?{" "}
           <Link className="text-[#30B6EC] font-bold" to="/login">

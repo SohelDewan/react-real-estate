@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import 'animate.css';
 
 // here EstateSection is an individual card
 const EstateSection = ({ estates }) => {
@@ -16,7 +17,7 @@ const EstateSection = ({ estates }) => {
   } = estates;
 
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl animate__animated animate__backInLeft animate__delay-1s">
       <figure>
         <img src={image} alt="image" />
       </figure>
@@ -31,7 +32,8 @@ const EstateSection = ({ estates }) => {
           <div className="badge badge-outline">{facilities}</div>
         </div>
      <Link className="flex justify-end" to={`/estate/${id}`}>
-    <button className="px-8 py-2 bg-[#30B6EC] text-white rounded-3xl">{view_property_button}
+    <button className="px-8 py-2 bg-[#30B6EC] text-white rounded-3xl">
+    {view_property_button}
     </button>
     </Link>
       </div>
