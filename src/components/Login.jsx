@@ -31,9 +31,10 @@ const Login = () => {
 
     signInUser(email, password)
     .then((result) => {
-      console.log(result.user);
       // navigate after login
-      navigate(location?.state ?  location.state : '/');
+      if(result.user){
+        navigate(location?.state ?  location.state : '/');
+      }
       
     })
     .catch((error) => {
@@ -50,7 +51,7 @@ const Login = () => {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: false,
-        });
+        })
     } else {
         toast.error('Login failed!', {
             position: 'top-right',
@@ -103,7 +104,7 @@ const Login = () => {
           
         <div className="form-control mt-6">
           <button
-           onClick={toggleToast} 
+           onChange={toggleToast} 
            className="btn bg-[#30B6EC] text-white border-0">
            Login</button>
           <ToastContainer />

@@ -17,7 +17,7 @@ const EstateSection = ({ estates }) => {
   } = estates;
 
   return (
-    <div className="card bg-base-100 shadow-xl animate__animated animate__backInLeft animate__delay-1s">
+    <div className="card bg-base-100 shadow-xl animate__animated animate__backInLeft ">
       <figure>
         <img src={image} alt="image" />
       </figure>

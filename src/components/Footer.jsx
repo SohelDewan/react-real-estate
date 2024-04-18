@@ -1,15 +1,31 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="footer mt-6 p-10 bg-neutral text-neutral-content">
      <div className="container mx-auto md:p-5 flex justify-between md:justify-around">
-     <aside>
+     <aside className="space-y-4">
      <img src="https://i.ibb.co/vsRGW27/logo.png" alt="logo" className="w-16" />
-      <p>
+      <p className="space-y-4">
         Residential Homes Ltd.
         <br />
-        Providing reliable tech since 1992
       </p>
+        <p>Providing reliable tech since 1992</p>
     </aside>
+    <div>
+      <h6 className="footer-title">All links</h6>
+      <ul className="space-y-4">
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/register">Register</Link>
+        </li>
+        <li>
+          <Link to="/estate-section-page">Estate Section</Link>
+        </li>
+      </ul>
+    </div>
     <nav>
       <h6 className="footer-title">Social</h6>
       <div className="grid grid-flow-col gap-4">

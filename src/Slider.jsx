@@ -8,7 +8,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+
 const Slider = () => {
+
+  const text = (<div className=" text-5xl md:text-7xl font-bold       absolute top-[40%] left-[20%] text-white pl-16  opacity-60">
+      <h2 >We will help you find</h2>       
+        <h2>Your Dream Home</h2>
+  </div>) 
+
   return (
     <Swiper
     className="animate__animated animate__flash"
@@ -26,6 +33,7 @@ const Slider = () => {
           border="0"
           style={{ height: "100vh", width: "100%" }}
         />
+        {text}
       </SwiperSlide>
       <SwiperSlide>
         <img
@@ -33,7 +41,7 @@ const Slider = () => {
           alt="home1"
           border="0"
           style={{ height: "100vh", width: "100%" }}
-        />
+        />{text}
       </SwiperSlide>
       <SwiperSlide>
         <img
@@ -41,7 +49,7 @@ const Slider = () => {
           alt="home2"
           border="0"
           style={{ height: "100vh", width: "100%" }}
-        />
+        />{text}
       </SwiperSlide>
       <SwiperSlide>
         <img
@@ -49,9 +57,9 @@ const Slider = () => {
           alt="home4"
           border="0"
           style={{ height: "100vh", width: "100%" }}
-        />
+        />{text}
       </SwiperSlide>
-      ...
+      
     </Swiper>
   );
 };

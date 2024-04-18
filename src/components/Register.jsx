@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { useState } from 'react';
 import 'animate.css';
 // import { useForm } from 'react-hook-form';
 
 const Register = () => {
-  const { createUser } = useAuth(); // useContext(AuthContext)
-
+  const { createUser, updateUserProfile } = useAuth(); // useContext(AuthContext)
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
@@ -32,21 +32,21 @@ const Register = () => {
     e.preventDefault();
     console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
-
     const name = form.get("name");
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
     console.log(name, photo, email, password);
-
-    //create user
+    
+    //create user and update profile
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        updateUserProfile(name, photo)
+        .then(()=>{
+            navigate(location?.state ?  location.state : '/')
+        })
       })
-      .catch((error) => {
-        console.error(error);
-      });
+      
   };
 
   return (
